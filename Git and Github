@@ -1,0 +1,108 @@
+1. Create a directory ‘project_dir’ & cd to ‘project_dir’.
+=> mkdir project_dir & cd project_dir
+2. Initialize git version database. (git init)
+=> git init
+3. Create a new file index.html
+=> echo > index.html
+4. Check the git status. You should find index.html as untracked file.
+=> git status (got index.html as untracked file)
+5. Stage the index.html file.
+=> git add inedx.html 
+6. Commit index.html
+=> git commit -m "Add index.html file"
+7. Make few changes in index.html & create a new file info.txt file. 
+=> echo This is some info for info.txt file. > info.txt
+8. Check git status. You should find index.html & info.txt as untracked files.
+=> git status
+9. Configure GIT to ignore all txt files.
+=> go to gitignore file then modifiy "*.txt" then add and commit
+10. Again check the git status. You should find only index.html as untracked file.
+=> git status
+11. State & commit index.html
+=> git add index.html, git commit -m "Another info in index"
+12. Log all your comments so far. 
+=> git log
+13. Make some changes in index.html.
+=> change in index.html
+14. Revert the change made in the previous step using git command. 
+=> git checkout index.html
+15. Again change index.html 
+=> chnage in index.html
+16. Stage index.html 
+=> git add index.html
+17. Revert back the last stage. 
+=> git reset HEAD index.html
+18. Rename ‘add’ command to ‘my-add’.
+=> git config --global alias.my-add add
+19. Using my_add command Stage index.html again & commit the changes 
+=> git my-add index.html
+20. Revert the last commit
+=> git revert HEAD
+
+
+GIT Branching
+SECTION-1 (HTML assignments) -
+22. Create an empty directory ‘Assignments’ & cd to ‘Assignments’.
+=> mkdir Assignments, cd Assignments
+23. Create a file README.txt inside ‘Assignments’ & write few lines about the contents of ‘Assignments’ folder.
+=> echo This is my assg folder > README.txt
+24. Commit README.txt file.
+=> git init, git add README.txt, git commit -m
+25. Now create a new branch ‘html-assignments’.
+=> git branch html-assignments
+26. Switch to ‘html-assignments’ branch.
+=> git checkout html-assignments
+27. Copy all HTML assignments inside ‘Assignments’ folder.
+=> copy
+28. Commit HTML assignments into ‘html-assignments’ branch.
+=> git add ., git commit -m
+29. Make minor changes into few files belonging to ‘html-assignments’ branch.
+=> git add.
+30. Commit those changed files.
+=> git commit -m "Make minor changes to HTML assignments"
+31. Switch to master branch.
+=> git checkout master
+32. Make minor changes into README.txt file & commit those changes into master.
+=> git add README.txt, git commit -m "Make minor changes to README.txt file"
+33. Again switch to ‘html-assignments’ branch.
+=> git checkout html-agg
+34. Make minor changes into few files belonging to ‘html-assignments’ branch.
+=> make chnages
+35. Commit those changes.
+=> git add ., git commit -m "Make minor changes to file in  HTML-assignments"
+36. Switch to master
+=> git checkout master
+37. Merge ‘html-assignments’ branch into master. Confirm all html assignments are shown in master
+=> git merge html-assignment
+git log --oneline --graph => verifies that 'html-assignments' branch has been merged into the 'master' branch
+38. Finally delete the ‘html-assignments’ branch. 
+=> git branch -d html-assignments => to delete
+
+SECTION-2 - (CSS assignments) Steps to follow: 
+1. Create a new branch ‘css-assignments’.
+=>  git branch css-assignments
+2. Switch to ‘css-assignments’ branch.
+=> git checkout css-assignments
+3. Copy all CSS assignments inside ‘Assignments’ folder.
+=> manually copy
+4. Commit CSS assignments into ‘css-assignments’ branch
+=> git commit -m "First commit for css assignment"
+6. Commit those changed files.
+=> git commit -m "Commit after modifying"
+7. Switch to master branch.
+=> git checkout master
+8. Make minor changes into README.txt file on line 3 & commit those changes into master. 
+=> git add ., git commit -m "Changes in line 3"
+9. Again switch to ‘css-assignments’ branch.
+=> git checkout css-assignments
+10. Make minor changes into few files belonging to ‘css-assignments’ branch. 
+11. Commit those changes.
+=> git add., git commit -m "Again Changes in file belong to css ass branch"
+12. Switch to master.
+=> git checkout master
+13. Merge ‘css-assignments’ branch into master. Confirm all css assignments are shown in master. 
+=> git merge css-assignments
+git log --oneline --graph => verifies that 'html-assignments' branch has been merged into the 'master' branch
+if error occored--open README.txt make changes then--git add README.txt, git commit -m "Resolve merge conflict in README.txt", git log --oneline --graph --all
+14. Finally delete the ‘css-assignments’ branch.
+=> git branch -d css-assignments
